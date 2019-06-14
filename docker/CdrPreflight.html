@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>CdrPreflight</title>
+<meta http-equiv="MSThemeCompatible" content="yes" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--
+Copyright (c) 2011 Sancho.
+http://cdrpro.ru
+-->
+
+<link rel="stylesheet" type="text/css" href="CdrPreflight.css">
+<script type="text/javascript" src="CdrPreflight.js"></Script>
+</head>
+
+<body onLoad="OnLoad()" oncontextmenu="return false;">
+  <div id="docker-content">
+  	<!-- top -->
+  	<div id="top">
+      <div id="buttons">
+      	<div class="btn bt1" title="Refresh Info"><a href="#" onClick="cmRefresh()"></a></div>
+        <div class="btn bt2" title="Options"><a href="#" onClick="cmOptions()"></a></div>
+        <div id="presetsList"></div>
+        <div class="btn bt5" title="Help Online"><a href="https://www.gitbook.com/book/cdrpro-macros/cdrpreflight/details" target="_blank"></a></div>
+        <div class="btn bt6" title="About..."><a href="#" onClick="cmAbout()"></a></div>
+      </div>
+    </div>
+    <!-- list1 -->
+    <div id="list1">
+      <div id="ListItems" class="items">
+      	<p style="background:none; padding-left:4px; color:#F60;">Click on the <b>Refresh</b> button for get information about active document.</p>
+      </div>
+      <div id="active-type">
+      	<span id="activeTYPE">Active type</span>
+        <div id="export-list"><a href="#" onClick="ExportList()">Export</a></div>
+      </div>
+    </div>
+    <!-- list2 -->
+    <div id="list2" class="items">
+      ...
+    </div>
+    <!-- conv -->
+    <div id="converter">
+		<div class="btn bt3" title="Convert"><a href="#" onClick="cmConverter()"></a></div>
+		<div class="btn bt4" title="Convert Options"><a href="#" onClick="cmConvOpt()"></a></div>
+		<div id="ConvPresets"></div>
+    </div>
+    
+   </div>
+</body>
+</html>

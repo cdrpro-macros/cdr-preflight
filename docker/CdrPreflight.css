@@ -1,0 +1,255 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	overflow: hidden;
+	cursor: default;
+}
+
+html {
+	background:buttonFace;
+}
+
+body {
+	margin: 0;
+	padding: 2px;
+}
+
+a {
+	display: block;
+	color: #000;
+	text-decoration: none;
+}
+a:hover {
+	background-color: #F60;
+}
+
+#docker-content {
+	position: relative;
+	height: 100%;
+}
+
+#top {
+	display: block;
+	height: 26px;
+}
+#buttons {
+	display: block;
+	height: 38px;
+	position: relative;
+}
+.btn {
+	display: block;
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	top: 0;
+}
+.btn a {
+	width: 22px;
+	height: 22px;
+	background: 0 0 no-repeat url(icons-btn/refresh.gif);
+	cursor: pointer;
+}
+.btn a:hover { background-color: transparent; }
+.bt1 { left: 0; }
+.bt2 { left: 25px; }
+.bt2 a { background-image: url(icons-btn/options.gif); }
+.bt5 { right: 25px; }
+.bt5 a { background-image: url(icons-btn/help.gif); }
+.bt6 { right: 0; }
+.bt6 a { background-image: url(icons-btn/about.gif); }
+
+#presetsList {
+	position: absolute;
+	display: block;
+	left: 50px;
+}
+#presetsList select {
+	font-size: 11px;
+	width: 115px;
+}
+
+#list1 {
+	display: block;
+	position: relative;
+	height: 100%;
+	padding-bottom: 226px;
+	overflow-y:auto;
+}
+.items {
+	height: 100%;
+	background: #FFF;
+	border: 1px solid #999;
+	overflow-y: auto;
+	padding: 2px;
+}
+.items p {
+	margin: 0;
+	padding: 0;
+	padding-left: 18px;
+	background: 0 0 no-repeat url(icons/def.gif);
+	color: #999;
+	cursor: default;
+	position: relative;
+}
+.items p b.clr {
+	display: block;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 0;
+	left: -18px;
+}
+.items a {
+	cursor: pointer;
+}
+.items p.about-info {
+	padding-left: 0;
+	background: none;
+	color: #000;
+}
+.items p.about-info a {
+	color: #F60;
+	text-decoration: underline;
+}
+.items p.about-info a:hover {
+	color: #FFF;
+}
+
+.items p.lNotVIS { background-image: url(icons/lNotVIS.gif); }
+.items p.lNotPr { background-image: url(icons/lNotPr.gif); }
+.items p.lNotEd { background-image: url(icons/lNotEd.gif); }
+
+.items p.sOLE { background-image: url(icons/sOLE.gif); }
+.items p.sBarCode { background-image: url(icons/sBarCode.gif); }
+.items p.sEPS { background-image: url(icons/sEPS.gif); }
+.items p.sSymbol { background-image: url(icons/sSymbol.gif); }
+.items p.sPerfect { background-image: url(icons/sPerfect.gif); }
+.items p.sPC { background-image: url(icons/sPC.gif); }
+.items p.sNClCur { background-image: url(icons/sNClCur.gif); }
+.items p.sNCCount, .items p.sNCMAX { background-image: url(icons/sNCCount.gif); }
+
+.items p.eTr, .items p.bTr { background-image: url(icons/eTr.gif); }
+.items p.eLens { background-image: url(icons/eLens.gif); }
+.items p.eBlend { background-image: url(icons/eBlend.gif); }
+.items p.eDrSh { background-image: url(icons/eDrSh.gif); }
+.items p.eContour { background-image: url(icons/eContour.gif); }
+.items p.eCPath { background-image: url(icons/eCPath.gif); }
+.items p.eBevel { background-image: url(icons/eBevel.gif); }
+.items p.eAMedia { background-image: url(icons/eAMedia.gif); }
+.items p.eExtrude { background-image: url(icons/eExtrude.gif); }
+.items p.eEnvelope { background-image: url(icons/eEnvelope.gif); }
+.items p.eDistort { background-image: url(icons/eDistort.gif); }
+.items p.ePersp { background-image: url(icons/ePersp.gif); }
+
+.items p.tText, .items p.tFSmal { background-image: url(icons/tText.gif); }
+.items p.tOver { background-image: url(icons/tOver.gif); }
+.items p.tPath { background-image: url(icons/tPath.gif); }
+.items p.tTable { background-image: url(icons/tTable.gif); }
+
+.items p.fUniform { background-image: url(icons/fUniform.gif); }
+.items p.fFountain { background-image: url(icons/fFountain.gif); }
+.items p.fMP { background-image: url(icons/fMP.gif); }
+.items p.fHatch { background-image: url(icons/fHatch.gif); }
+.items p.fPat { background-image: url(icons/fPat.gif); }
+.items p.fPS { background-image: url(icons/fPS.gif); }
+.items p.fTex { background-image: url(icons/fTex.gif); }
+.items p.fMesh { background-image: url(icons/fMesh.gif); }
+.items p.fNO { background-image: url(icons/fNO.gif); }
+
+.items p.oCount, .items p.oECount, .items p.oScale, .items p.oSmall { background-image: url(icons/Outline.gif); }
+
+.items p.oOverprint, .items p.bOverprint { background-image: url(icons/Overprint.gif); }
+.items p.cBW, .items p.bBW { background-image: url(icons/cBW.gif); }
+.items p.cCMY { background-image: url(icons/cCMY.gif); }
+.items p.cCMYK, .items p.bCMYK { background-image: url(icons/cCMYK.gif); }
+.items p.cControl, .items p.c400, .items p.tSColor { background-image: url(icons/cControl.gif); }
+.items p.cGRAY, .items p.bGray { background-image: url(icons/cGRAY.gif); }
+.items p.cHEX { background-image: url(icons/cHEX.gif); }
+.items p.cHLS { background-image: url(icons/cHLS.gif); }
+.items p.cHSB { background-image: url(icons/cHSB.gif); }
+.items p.cLAB, .items p.bLAB { background-image: url(icons/cLAB.gif); }
+.items p.cMIX { background-image: url(icons/cMIX.gif); }
+.items p.cMUL, .items p.bDevN { background-image: url(icons/cMUL.gif); }
+.items p.cREG { background-image: url(icons/cREG.gif); }
+.items p.cRGB, .items p.bRGB { background-image: url(icons/cRGB.gif); }
+.items p.cSPOT { background-image: url(icons/cSPOT.gif); }
+.items p.cTIL { background-image: url(icons/cTIL.gif); }
+.items p.cUSER { background-image: url(icons/cUSER.gif); }
+.items p.cYIQ { background-image: url(icons/cYIQ.gif); }
+
+.items p.bCount { background-image: url(icons/Bitmap.gif); }
+.items p.bDPImin, .items p.bDPImax { background-image: url(icons/bResemple.gif); }
+.items p.bRot { background-image: url(icons/bRot.gif); }
+.items p.bUnProp { background-image: url(icons/bUnProp.gif); }
+.items p.bCrop { background-image: url(icons/bCrop.gif); }
+.items p.bLink { background-image: url(icons/bLink.gif); }
+
+.items p.bDuoT { background-image: url(icons/bDuoT.gif); }
+.items p.bCMYKm { background-image: url(icons/bCMYKm.gif); }
+.items p.bPAL, .items p.b16 { background-image: url(icons/bPAL.gif); }
+
+.items p.red, #list1 .items p.red a { color: #F00; }
+.items p.NoIco { background: none; }
+.items p.alert { background-image: url(icons/alert.gif); }
+
+#active-type {
+	display: block;
+	position: absolute;
+	bottom: 205px;
+	left: 0;
+	height: 20px;
+	width: 100%;
+}
+#active-type span {
+	font-size: 11px;
+	position: absolute;
+	top: 2px;
+	left: 0;
+}
+#export-list a {
+	position: absolute;
+	top: 1px;
+	right: 0;
+	display: block;
+	font-size: 10px;
+	border: 1px solid #999;
+	padding: 0 6px;
+	cursor: pointer;
+}
+
+#list2 {
+	display: block;
+	width: 100%;
+	height: 150px;
+	position: absolute;
+	bottom: 28px;
+	left: 0;
+	background: #FFF;
+	border: 1px solid #999;
+}
+
+#converter {
+	display: block;
+	width: 100%;
+	position: absolute;
+	bottom: 2px;
+	left: 0;
+	height: 22px;
+}
+.bt3 { right: 0; }
+.bt3 a { background-image: url(icons-btn/convert.gif); }
+.bt4 { left: 0; }
+.bt4 a { background-image: url(icons-btn/options.gif); }
+
+#ConvPresets {
+	position: absolute;
+	left: 26px;
+}
+#ConvPresets select {
+	font-size: 11px;
+	width: 164px;
+}
