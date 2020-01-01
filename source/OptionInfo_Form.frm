@@ -146,7 +146,7 @@ Private Sub myLoadPresetsList()
     Select Case a(c - 1)
       Case "Problem outlines", "li1", "li2", "li3", "li4", "li5", "li6"
         'Do Nothing
-        Idx.Add "===", "i" & c
+        Idx.Add IGNORE_ITEM, "i" & c
       Case Else
         List2.AddItem a(c - 1)
         Idx.Add CStr(List2.ListCount - 1), "i" & c
@@ -179,7 +179,9 @@ Private Sub cb_presList_Change()
   Dim i&, p$()
   For i = 1 To UBound(a) - 1
     p = Split(a(i), "-")
-    List2.selected(CLng(Idx.Item("i" & i))) = p(0)
+    If Idx.Item("i" & i) <> IGNORE_ITEM Then
+      List2.selected(CLng(Idx.Item("i" & i))) = p(0)
+    End If
   Next i
 End Sub
 
@@ -212,7 +214,7 @@ Private Sub cm_presSave_Click()
   
   Dim i2&
   For i2 = 1 To Idx.Count
-    If Idx(i2) = "===" Then
+    If Idx(i2) = IGNORE_ITEM Then
       strPres = strPres & "0|"
     Else
       If List2.selected(Idx(i2)) Then strPres = strPres & "1|" Else strPres = strPres & "0|"
@@ -237,7 +239,7 @@ Private Sub cm_presAdd_Click()
   
   Dim i&
   For i = 1 To Idx.Count
-    If Idx(i) = "===" Then
+    If Idx(i) = IGNORE_ITEM Then
       strPres = strPres & "0|"
     Else
       If List2.selected(Idx(i)) Then strPres = strPres & "1|" Else strPres = strPres & "0|"

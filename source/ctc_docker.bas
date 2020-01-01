@@ -396,7 +396,7 @@ Function ShowAbout() As String
   End If
   
   ShowAbout = "<p class=""about-info"">" & "Version: " & macroVersion & " " & macroModifyDate & "<br />" & _
-    "Copyright " & Chr(169) & " 2006-2019 by Sancho" & "<br />" & _
+    "Copyright " & Chr(169) & " " & macroCopyright & "<br />" & _
     "<br />" & _
     "<a href=""http://" & myWebSite & """ target=""_blank"">CDRPRO.RU</a>" & _
     "<a href=""mailto:" & myEmail & """>" & myEmail & "</a>" & _

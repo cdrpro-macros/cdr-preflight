@@ -10,8 +10,9 @@ Option Explicit
 Public Const myResumeErr As Boolean = False
 
 Public Const macroName$ = "CdrPreflight"
-Public Const macroVersion$ = "6.3.1"
-Public Const macroModifyDate$ = "(16.09.2017)"
+Public Const macroVersion$ = "6.3.2"
+Public Const macroModifyDate$ = "(01.01.2020)"
+Public Const macroCopyright$ = "2006-2020 by Sanich"
 Public Const sREGAPPOPT$ = "General"
 
 Public Const convPresVer& = 3 'Версия пресета
@@ -20,6 +21,7 @@ Public Const ctcPresVer& = 1 'Версия пресета для проверки
 Public Const myWebSite$ = "cdrpro.ru"
 Public Const myEmail$ = "info@cdrpro.ru"
 
+Public Const IGNORE_ITEM = "==="
 
 Public cdrMyType$ 'Типы для списка
 Public Const myDefPreset$ = "1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|"
