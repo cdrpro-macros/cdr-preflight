@@ -2,7 +2,7 @@
 
 # ATTRIBUTES
 Name '${MyName}'
-OutFile '${MyName} Installer X7-2019.exe'
+OutFile '${MyName} Installer X7-2020.exe'
 BrandingText 'http://cdrpro.ru/'
 SetCompressor /SOLID lzma
 XPStyle on
@@ -34,6 +34,8 @@ Var cdr20
 Var cdr20x64
 Var cdr21
 Var cdr21x64
+Var cdr22
+Var cdr22x64
 
 # PLUGINS
 !include Sections.nsh
@@ -119,6 +121,18 @@ Section /o '' sec21x64
   ${ENDIF}
 SectionEnd
 
+Section /o '' sec22
+  ${IF} $cdr22 != ''
+    !insertmacro execSection 22 2020 ''
+  ${ENDIF}
+SectionEnd
+
+Section /o '' sec22x64
+  ${IF} $cdr22x64 != ''
+    !insertmacro execSection 22 2020 x64
+  ${ENDIF}
+SectionEnd
+
 !macro checkApp appVer xVer
   ${If} '${xVer}' != ''
     SetRegView 64
@@ -163,6 +177,8 @@ Function .onInit
   !insertmacro checkApp 20 x64
   !insertmacro checkApp 21 ''
   !insertmacro checkApp 21 x64
+  !insertmacro checkApp 22 ''
+  !insertmacro checkApp 22 x64
 
   ${IF} ${SectionIsSelected} ${sec17}
     SectionSetText ${sec17} 'CorelDRAW X7'
@@ -197,5 +213,12 @@ Function .onInit
   ${ENDIF}
   ${IF} ${SectionIsSelected} ${sec21x64}
     SectionSetText ${sec21x64} 'CorelDRAW 2019 (64-Bit)'
+  ${ENDIF}
+
+  ${IF} ${SectionIsSelected} ${sec22}
+    SectionSetText ${sec22} 'CorelDRAW 2020'
+  ${ENDIF}
+  ${IF} ${SectionIsSelected} ${sec22x64}
+    SectionSetText ${sec22x64} 'CorelDRAW 2020 (64-Bit)'
   ${ENDIF}
 FunctionEnd
